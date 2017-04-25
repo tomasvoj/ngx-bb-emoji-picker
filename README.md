@@ -1,2 +1,3 @@
-# ngx-bb-emoji-picker
-ngx emoji picker
+# NgxBbEmojionePicker
+
+WORK IN PROGRESS
