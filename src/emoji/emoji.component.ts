@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { EmojiService } from '../emoji/emoji.service';
-import * as _ from 'underscore';
+import { EmojiService } from './emoji.service';
+import _ from 'underscore';
 
 @Component({
   selector: 'app-ngx-bb-emoji-picker',
   templateUrl: './emoji.component.html',
-  styleUrls: ['./emoji.component.css']
+  styleUrls: ['./emoji.component.scss']
 })
 export class EmojiComponent {
   @Input()  selected;
@@ -25,7 +25,8 @@ export class EmojiComponent {
       };
       let items = [];
       _(config).each(function(elem, key){
-        elem.url = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/' + elem.code_points.base + '.png';
+        elem.key = elem.shortname.replace(/:/g, '');
+        //elem.url = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/' + elem.code_points.base + '.png';
         items.push(elem);
       });
       this.emojis = _.groupBy(items, function(item){ return item.category; });

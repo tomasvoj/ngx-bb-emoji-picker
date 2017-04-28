@@ -3,10 +3,7 @@
     <ng-template md-tab-label>
       {{category}}
     </ng-template>
-    <md-grid-list cols="2" rowHeight="2:1" *ngFor="let item of emojis[category]; let i=index">
-      <md-grid-tile (click)="select(item.shortname)">
-        <img class="emojione" alt="☑️" title="item.shortname" [src]="item.url">
-      </md-grid-tile>
-    </md-grid-list>
+    <span *ngFor="let item of emojis[category]; let i=index" (click)="select(item.shortname)" [ngClass]="'e1a-sm e1a-' + item.key">
+    </span>
   </md-tab>
 </md-tab-group>
