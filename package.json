@@ -1,6 +1,6 @@
 {
   "name": "ngx-bb-emojione-picker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf lib && tsc -p src"
