@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import * as emoji from 'emojione';
+import emoji from 'emojione';
 
 @Pipe({name: 'emoji'})
 export class EmojiPipe implements PipeTransform {

@@ -25,7 +25,7 @@ $size-map: (
     }
 }
 
-@import '_emojione-awesome.map';
+@import 'emojione-awesome.map';
 
 @each $code, $name in $emoji-map {
 

@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { EmojiModule } from '../../../src/emoji/emoji.module';
+import { EmojiModule } from '../../../src/emoji.module';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 

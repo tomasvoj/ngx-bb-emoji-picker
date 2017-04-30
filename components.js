@@ -1,0 +1,1 @@
+exports.EmojiModule = require('./lib/EmojiModule').EmojiModule;
