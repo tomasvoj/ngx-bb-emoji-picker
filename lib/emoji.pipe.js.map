@@ -1,1 +1,0 @@
-{"version":3,"file":"emoji.pipe.js","sourceRoot":"","sources":["../src/emoji.pipe.ts"],"names":[],"mappings":";;;;;;;;AAAA,wCAAoD;AACpD,uCAA6B;AAG7B,IAAa,SAAS,GAAtB;IACE,SAAS,CAAC,IAAY;QACpB,MAAM,CAAC,kBAAK,CAAC,gBAAgB,CAAC,IAAI,IAAI,EAAE,CAAC,CAAC;IAC5C,CAAC;CACF,CAAA;AAJY,SAAS;IADrB,WAAI,CAAC,EAAC,IAAI,EAAE,OAAO,EAAC,CAAC;GACT,SAAS,CAIrB;AAJY,8BAAS"}
