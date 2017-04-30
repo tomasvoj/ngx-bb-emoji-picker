@@ -5,12 +5,20 @@ export default {
     dest: 'bundles/ngx-bb-emojione-picker.umd.min.tmp',
     format: 'umd',
     moduleName: 'ngx.bb.emojione.picker',
-    external: [
-        '@angular/core'
-    ],
-    globals: {
-        '@angular/core': 'ng.core'
-    },
+  external  : [
+    '@angular/core',
+    '@angular/common',
+    '@angular/material',
+    '@angular/http',
+    'emojione'
+  ],
+  globals   : {
+    '@angular/core': 'ng.core',
+    '@angular/common': 'ng.common',
+    '@angular/material': 'ng.material',
+    '@angular/http': 'ng.http',
+    'emojione': '_emojione'
+  },
     plugins: [
         uglify()
     ]
