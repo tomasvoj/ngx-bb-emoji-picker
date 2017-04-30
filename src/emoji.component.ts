@@ -4,8 +4,8 @@ import _ from 'underscore';
 
 @Component({
   selector: 'app-ngx-bb-emoji-picker',
-  templateUrl: './emoji.component.html',
-  styleUrls: ['./emoji.component.scss']
+  templateUrl: 'emoji.component.html',
+  styleUrls: ['emoji.component.scss']
 })
 export class EmojiComponent {
   @Input()  selected;

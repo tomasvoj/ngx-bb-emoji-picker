@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
 
+import { Observable } from "rxjs/Observable"; // <- add this import
+
 @Injectable()
 export class EmojiService {
   constructor(private http:Http) {
