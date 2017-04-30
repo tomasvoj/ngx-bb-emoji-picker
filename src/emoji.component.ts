@@ -4,8 +4,18 @@ import _ from 'underscore';
 
 @Component({
   selector: 'app-ngx-bb-emoji-picker',
-  templateUrl: 'emoji.component.html',
-  styleUrls: ['emoji.component.scss']
+  templateUrl: `
+    <md-tab-group>
+        <md-tab *ngFor='let category of categories'>
+            <ng-template md-tab-label>
+                {{category}}
+            </ng-template>
+            <span *ngFor="let item of emojis[category]; let i=index" (click)="select(item.shortname)" [ngClass]="'e1a-sm e1a-' + item.key">
+            </span>
+        </md-tab>
+  </md-tab-group>
+   `,
+  styleUrls: ['./emoji.component.scss']
 })
 export class EmojiComponent {
   @Input()  selected;
