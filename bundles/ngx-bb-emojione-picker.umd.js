@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/material'), require('@angular/http'), require('rxjs/Rx'), require('rxjs/add/operator/map'), require('rxjs/add/operator/toPromise'), require('rxjs/add/operator/catch'), require('underscore'), require('emojione')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', '@angular/material', '@angular/http', 'rxjs/Rx', 'rxjs/add/operator/map', 'rxjs/add/operator/toPromise', 'rxjs/add/operator/catch', 'underscore', 'emojione'], factory) :
-	(factory((global.ngx = global.ngx || {}, global.ngx.bb = global.ngx.bb || {}, global.ngx.bb.emojione = global.ngx.bb.emojione || {}, global.ngx.bb.emojione.picker = global.ngx.bb.emojione.picker || {}),global.ng.core,global.ng.common,global.ng.material,global.ng.http,null,null,null,null,global._,global._emojione));
+	(factory((global.ngx = global.ngx || {}, global.ngx.bb = global.ngx.bb || {}, global.ngx.bb.emojione = global.ngx.bb.emojione || {}, global.ngx.bb.emojione.picker = global.ngx.bb.emojione.picker || {}),global.ng.core,global.ng.common,global.ng.material,global.ng.http,null,null,null,null,global._underscore,global._emojione));
 }(this, (function (exports,_angular_core,_angular_common,_angular_material,_angular_http,rxjs_Rx,rxjs_add_operator_map,rxjs_add_operator_toPromise,rxjs_add_operator_catch,_,emoji) { 'use strict';
 
 _ = 'default' in _ ? _['default'] : _;
@@ -76,8 +76,8 @@ var EmojiComponent = (function () {
 EmojiComponent.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'app-ngx-bb-emoji-picker',
-                templateUrl: 'emoji.component.html',
-                styleUrls: ['emoji.component.scss']
+                templateUrl: "\n    <md-tab-group>\n        <md-tab *ngFor='let category of categories'>\n            <ng-template md-tab-label>\n                {{category}}\n            </ng-template>\n            <span *ngFor=\"let item of emojis[category]; let i=index\" (click)=\"select(item.shortname)\" [ngClass]=\"'e1a-sm e1a-' + item.key\">\n            </span>\n        </md-tab>\n  </md-tab-group>\n   ",
+                styleUrls: ['./emoji.component.scss']
             },] },
 ];
 /** @nocollapse */

@@ -1,6 +1,6 @@
 {
   "name": "ngx-bb-emojione-picker",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "license": "MIT",
   "main": "bundles/ngx-bb-emojione-picker.umd.js",
   "module": "index.js",
