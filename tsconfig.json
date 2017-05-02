@@ -1,23 +1,27 @@
 
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
     "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
     "sourceMap": true,
     "inlineSources": false,
     "declaration": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "stripInternal": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   },
   "files": [
     "index.ts",
     "test/logger.spec.ts"
   ],
   "typeRoots": [
-    "../node_modules/@types"
+    "node_modules/@types"
   ],
   "types": [
     "jasmine"

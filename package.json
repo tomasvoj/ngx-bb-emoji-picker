@@ -1,6 +1,6 @@
 {
   "name": "ngx-bb-emojione-picker",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "license": "MIT",
   "main": "bundles/ngx-bb-emojione-picker.umd.js",
   "module": "index.js",
@@ -11,7 +11,7 @@
     "clear:css": "find src -type f \\( -iname '*.css' -o -iname '*.css.map' \\) -delete",
     "clear:test": "find test -type f \\( -iname '*.js' -o -iname '*.js.map' -o -iname '*.d.ts' \\) -delete",
     "clear:metadata": "find src -type f -iname '*.metadata.json' -delete && rm -f index.metadata.json",
-    "clear:bundle": "rm -rf bundles",
+    "clear:bundle": "rm -rf bundles/*",
     "clear:tsc": "npm run clear:js && npm run clear:dts",
     "clear:ngc": "npm run clear:tsc && npm run clear:metadata",
     "clear": "npm run clear:ngc && npm run clear:css && npm run clear:bundle && npm run clear:test",
