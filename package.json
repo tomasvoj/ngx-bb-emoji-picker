@@ -1,6 +1,6 @@
 {
   "name": "ngx-bb-emojione-picker",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "bundles/ngx-bb-emojione-picker.umd.js",
   "module": "index.js",
@@ -21,7 +21,7 @@
     "tsc:w": "tsc -w",
     "ngc": "ngc -p tsconfig-build.json",
     "********************** BUILD *********************": "",
-    "build-css": "node-sass --include-path src src/emoji.component.scss   src/emoji.component.css",
+    "build-css": "node-sass --include-path assets assets/style.scss   assets/style.css",
     "********************** TEST **********************": "",
     "********************** ROLLUP **********************": "",
     "rollup": "rollup -c rollup.config.js && npm run rollup:banner",

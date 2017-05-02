@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://github.com/noemi-salaun/ng-logger/blob/master/LICENSE
  */
 
-import {Logger} from "../src/logger.service";
+import {Logger} from "../src/.service";
 import {TestBed, inject} from "@angular/core/testing";
 import {NgLoggerModule} from "../src/ng-logger.module";
 import {Level} from "../src/level.enum";

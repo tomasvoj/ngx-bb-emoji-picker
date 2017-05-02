@@ -18,7 +18,7 @@
   },
   "files": [
     "index.ts",
-    "test/logger.spec.ts"
+    "test/ngx-bb-emojione-picker.spec.ts"
   ],
   "typeRoots": [
     "node_modules/@types"

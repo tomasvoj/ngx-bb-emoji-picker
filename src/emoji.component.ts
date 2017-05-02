@@ -14,8 +14,7 @@ import _ from 'underscore';
             </span>
         </md-tab>
     </md-tab-group>
-  `,
-  styleUrls: ['src/emoji.component.css']
+  `
 })
 export class EmojiComponent {
   @Input()  selected;

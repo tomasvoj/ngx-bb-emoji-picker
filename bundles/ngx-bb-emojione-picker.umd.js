@@ -76,8 +76,7 @@ var EmojiComponent = (function () {
 EmojiComponent.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'app-ngx-bb-emoji-picker',
-                template: "\n    <md-tab-group>\n        <md-tab *ngFor='let category of categories'>\n            <ng-template md-tab-label>\n                {{category}}\n            </ng-template>\n            <span *ngFor=\"let item of emojis[category]; let i=index\" (click)=\"select(item.shortname)\" [ngClass]=\"'e1a-sm e1a-' + item.key\">\n            </span>\n        </md-tab>\n    </md-tab-group>\n  ",
-                styleUrls: ['./emoji.component.css']
+                template: "\n    <md-tab-group>\n        <md-tab *ngFor='let category of categories'>\n            <ng-template md-tab-label>\n                {{category}}\n            </ng-template>\n            <span *ngFor=\"let item of emojis[category]; let i=index\" (click)=\"select(item.shortname)\" [ngClass]=\"'e1a-sm e1a-' + item.key\">\n            </span>\n        </md-tab>\n    </md-tab-group>\n  "
             },] },
 ];
 /** @nocollapse */
