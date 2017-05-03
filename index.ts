@@ -1,1 +1,1 @@
-export * from './src/emoji.module';
+export { EmojiModule } from './src/emoji.module';

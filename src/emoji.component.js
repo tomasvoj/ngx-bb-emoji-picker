@@ -1,11 +1,18 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { EmojiService } from './emoji.service';
-import _ from 'underscore';
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var underscore_1 = require("underscore");
 var EmojiComponent = (function () {
     function EmojiComponent(emojiService) {
         var _this = this;
         this.emojiService = emojiService;
-        this.onSelect = new EventEmitter();
+        this.onSelect = new core_1.EventEmitter();
         this.categories = [];
         this.config = emojiService.getEmojiConfig().subscribe(function (config) {
             console.log(config);
@@ -16,12 +23,12 @@ var EmojiComponent = (function () {
             }
             ;
             var items = [];
-            _(config).each(function (elem, key) {
+            underscore_1.default(config).each(function (elem, key) {
                 elem.key = elem.shortname.replace(/:/g, '');
                 //elem.url = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/' + elem.code_points.base + '.png';
                 items.push(elem);
             });
-            _this.emojis = _.groupBy(items, function (item) { return item.category; });
+            _this.emojis = underscore_1.default.groupBy(items, function (item) { return item.category; });
         });
     }
     EmojiComponent.prototype.getCategoryIconPath = function (category) {
@@ -32,30 +39,16 @@ var EmojiComponent = (function () {
     };
     return EmojiComponent;
 }());
-export { EmojiComponent };
-/*  ngOnInit(private emojiService: EmojiService) {
-    this.config = emojiService.getConfig().subscribe((config) => {
-      console.log(config);
-      for (var id in config) {
-        debugger
-        if (this.categories.indexOf(this.config[id].category) === -1) {
-          this.categories.push(this.config[id].category);
-        }
-      };
-    });
-  }*/
-EmojiComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'app-ngx-bb-emoji-picker',
-                template: "\n    <md-tab-group>\n        <md-tab *ngFor='let category of categories'>\n            <ng-template md-tab-label>\n                {{category}}\n            </ng-template>\n            <span *ngFor=\"let item of emojis[category]; let i=index\" (click)=\"select(item.shortname)\" [ngClass]=\"'e1a-sm e1a-' + item.key\">\n            </span>\n        </md-tab>\n    </md-tab-group>\n  "
-            },] },
-];
-/** @nocollapse */
-EmojiComponent.ctorParameters = function () { return [
-    { type: EmojiService, },
-]; };
-EmojiComponent.propDecorators = {
-    'selected': [{ type: Input },],
-    'onSelect': [{ type: Output },],
-};
-//# sourceMappingURL=emoji.component.js.map
+__decorate([
+    core_1.Input()
+], EmojiComponent.prototype, "selected", void 0);
+__decorate([
+    core_1.Output()
+], EmojiComponent.prototype, "onSelect", void 0);
+EmojiComponent = __decorate([
+    core_1.Component({
+        selector: 'app-ngx-bb-emoji-picker',
+        template: "\n    <md-tab-group>\n        <md-tab *ngFor='let category of categories'>\n            <ng-template md-tab-label>\n                {{category}}\n            </ng-template>\n            <span *ngFor=\"let item of emojis[category]; let i=index\" (click)=\"select(item.shortname)\" [ngClass]=\"'e1a-sm e1a-' + item.key\">\n            </span>\n        </md-tab>\n    </md-tab-group>\n  "
+    })
+], EmojiComponent);
+exports.EmojiComponent = EmojiComponent;
